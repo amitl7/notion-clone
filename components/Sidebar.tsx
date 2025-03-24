@@ -13,17 +13,17 @@ import {
 function Sidebar() {
 
     // create a variable 
-    const menuOptions = ( );
+    const menuOptions = (
     // have inside a react fragment 
     <>
     <NewDocumentButton/> 
-    {/* list....  */}
-    {/* shared with me docts.  */}
+    
     </>
-
+    );
+    
   return (
         <div className="p-2 md:p-5 bd-gray-200 relative">
-            {/* md:hidden means on a medium screen it stays hidden but not on a small one.  */}
+            {/* md:hidden means on a medium screen it stays hidden but not on a small one. */}
             <div className="md:hidden"> 
 
                 <Sheet>
