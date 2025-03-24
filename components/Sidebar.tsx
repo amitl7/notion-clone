@@ -1,3 +1,4 @@
+import { MenuIcon } from "lucide-react";
 import NewDocumentButton from "./NewDocumentButton";
 import {
     Sheet,
@@ -10,29 +11,42 @@ import {
   
 
 function Sidebar() {
+
+    // create a variable 
+    const menuOptions = ( );
+    // have inside a react fragment 
+    <>
+    <NewDocumentButton/> 
+    {/* list....  */}
+    {/* shared with me docts.  */}
+    </>
+
   return (
-    <div className="p-2 md:p-5 bd-gray-200 relative">
-        <Sheet>
-  <SheetTrigger>Open</SheetTrigger>
-  <SheetContent side="left">
-    <SheetHeader>
-      <SheetTitle>Menu</SheetTitle>
-      <div>
-        {/* options */}
-      </div>
+        <div className="p-2 md:p-5 bd-gray-200 relative">
+            {/* md:hidden means on a medium screen it stays hidden but not on a small one.  */}
+            <div className="md:hidden"> 
 
-    </SheetHeader>
-  </SheetContent>
-</Sheet>
+                <Sheet>
+                    <SheetTrigger>
+                        <MenuIcon className="p-2 hover:opacity-30 rounded-lg" size={40} />
+                    </SheetTrigger>
+                    <SheetContent side="left">
+                        <SheetHeader>
+                            <SheetTitle>Menu</SheetTitle>
+                            <div>
+                                {menuOptions}
+                            </div>
+
+                        </SheetHeader>
+                    </SheetContent>
+                </Sheet>
+            </div>
 
 
-        <div className="hidden md:inline">
+            <div className="hidden md:inline">{menuOptions}</div>
 
-        <NewDocumentButton /> 
         </div>
-       
-    </div>
-  );
+    );
 }
 
 export default Sidebar;
